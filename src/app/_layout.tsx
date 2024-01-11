@@ -1,7 +1,14 @@
-import { Slot } from "expo-router"
+import { View, Text } from 'react-native';
+import React from 'react';
+import { Stack } from 'expo-router';
 
-export default function RootLaout() {
+export default function RootLayout() {
 	return (
-		<Slot />
+		<Stack>
+			<Stack.Screen
+				name="(tabs)"
+				options={{ headerShown: false }}
+			/>
+		</Stack>
 	);
 }
