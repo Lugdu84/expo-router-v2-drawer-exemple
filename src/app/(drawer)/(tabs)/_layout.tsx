@@ -1,9 +1,13 @@
+import { DrawerToggleButton } from '@react-navigation/drawer';
 import { Slot, Tabs } from 'expo-router';
 import { TabBarIcon, TabBarLabel } from 'src/components/tabs-items';
 
 export default function TabsLaout() {
 	return (
-		<Tabs>
+		<Tabs
+			screenOptions={{
+				headerLeft: () => <DrawerToggleButton />,
+			}}>
 			<Tabs.Screen
 				name="index"
 				options={{
